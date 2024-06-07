@@ -16,12 +16,16 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Homepage/>}/>
+    <switch>
+    <Route path='/' element={<Homepage/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/signin' element={<Signin/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path="/send" element={<SendMoney />} />
       <Route path="/transfer" element={<Transfer/>} />
+    </switch>
+      
+      
     </Routes>
     
     </BrowserRouter>
