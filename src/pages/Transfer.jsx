@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import DotLoader from "react-spinners/DotLoader";
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 const Transfer = () => {
 
     
 
-
+const navigate = useNavigate()
 
     let [loading, setLoading] = useState(false);
 
@@ -20,7 +20,7 @@ const Transfer = () => {
     })
 
     setTimeout(()=>{
-        window.location.replace("/dashboard")
+        navigate("/dashboard")
     }, 5000)
 
     return (
